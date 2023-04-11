@@ -1,0 +1,11 @@
+<header class="custom-header">
+    <div class="wrapper">
+        <div class="logo"></div>
+        <nav class="nav">
+          <router-link class="button" v-for="route in routes" :key="route.path" :to="route.path">
+              {{route.name}}
+            </router-link>
+        </nav>
+    </div>
+  
+</header>

@@ -1,0 +1,154 @@
+﻿/*
+    #region GLOBAL
+    
+    Global rules
+
+*/
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+
+  body {
+    width: 100%;
+    position: relative;
+
+    &.no-scroll {
+      overflow: hidden;
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+
+    .wrapper {
+      width: 100%;
+      padding: 16px;
+      margin-right: auto;
+      margin-left: auto;
+      display: flex;
+      align-items: center;
+
+      @media (min-width: 960px) {
+        max-width: 900px;
+      }
+
+      @media (min-width: 1280px) {
+        max-width: 1200px;
+      }
+
+      @media (min-width: 1920px) {
+        max-width: 1800px;
+      }
+
+      @media (min-width: 2560px) {
+        max-width: 2400px;
+      }
+    }
+
+    .button {
+      align-items: center;
+      border-radius: 4px;
+      display: inline-grid;
+      grid-template-areas: "prepend content append";
+      grid-template-columns: max-content auto max-content;
+      font-weight: 500;
+      justify-content: center;
+      letter-spacing: 0.0892857143em;
+      line-height: normal;
+      max-width: 100%;
+      outline: none;
+      position: relative;
+      text-decoration: none;
+      text-indent: 0.0892857143em;
+      text-transform: uppercase;
+      transition-property: box-shadow, transform, opacity, background;
+      transition-duration: 0.28s;
+      transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+      user-select: none;
+      vertical-align: middle;
+      flex-shrink: 0;
+      border-color: rgba(var(--v-border-color), var(--v-border-opacity));
+      border-style: solid;
+      border-width: 0;
+      height: calc(var(--v-btn-height) + 0px);
+    }
+
+    .main {
+      flex-basis: 0;
+      flex-grow: 1;
+      max-width: 100%;
+      background: rgb(var(--v-theme-surface));
+      color: rgba(var(--v-theme-on-surface), var(--v-high-emphasis-opacity));
+      min-height: 70vh;
+      border-radius: 8px;
+      padding: 12px;
+    }
+  }
+}
+
+.v-theme--dark {
+  color-scheme: dark;
+  --v-theme-background: 18, 18, 18;
+  --v-theme-background-overlay-multiplier: 1;
+  --v-theme-surface: 33, 33, 33;
+  --v-theme-surface-overlay-multiplier: 1;
+  --v-theme-surface-variant: 189, 189, 189;
+  --v-theme-surface-variant-overlay-multiplier: 2;
+  --v-theme-on-surface-variant: 66, 66, 66;
+  --v-theme-primary: 33, 150, 243;
+  --v-theme-primary-overlay-multiplier: 2;
+  --v-theme-primary-darken-1: 55, 0, 179;
+  --v-theme-primary-darken-1-overlay-multiplier: 1;
+  --v-theme-secondary: 66, 66, 66;
+  --v-theme-secondary-overlay-multiplier: 1;
+  --v-theme-secondary-darken-1: 3, 218, 197;
+  --v-theme-secondary-darken-1-overlay-multiplier: 2;
+  --v-theme-error: 207, 102, 121;
+  --v-theme-error-overlay-multiplier: 2;
+  --v-theme-info: 33, 150, 243;
+  --v-theme-info-overlay-multiplier: 2;
+  --v-theme-success: 76, 175, 80;
+  --v-theme-success-overlay-multiplier: 2;
+  --v-theme-warning: 251, 140, 0;
+  --v-theme-warning-overlay-multiplier: 2;
+  --v-theme-tertiary: 229, 115, 115;
+  --v-theme-tertiary-overlay-multiplier: 2;
+  --v-theme-accent: 255, 64, 129;
+  --v-theme-accent-overlay-multiplier: 2;
+  --v-theme-quarternary: 176, 209, 232;
+  --v-theme-quarternary-overlay-multiplier: 2;
+  --v-theme-on-background: 255, 255, 255;
+  --v-theme-on-surface: 255, 255, 255;
+  --v-theme-on-primary: 255, 255, 255;
+  --v-theme-on-primary-darken-1: 255, 255, 255;
+  --v-theme-on-secondary: 255, 255, 255;
+  --v-theme-on-secondary-darken-1: 0, 0, 0;
+  --v-theme-on-error: 255, 255, 255;
+  --v-theme-on-info: 255, 255, 255;
+  --v-theme-on-success: 255, 255, 255;
+  --v-theme-on-warning: 255, 255, 255;
+  --v-theme-on-tertiary: 255, 255, 255;
+  --v-theme-on-accent: 255, 255, 255;
+  --v-theme-on-quarternary: 0, 0, 0;
+  --v-border-color: 255, 255, 255;
+  --v-border-opacity: 0.12;
+  --v-high-emphasis-opacity: 0.87;
+  --v-medium-emphasis-opacity: 0.6;
+  --v-disabled-opacity: 0.38;
+  --v-idle-opacity: 0.1;
+  --v-hover-opacity: 0.04;
+  --v-focus-opacity: 0.12;
+  --v-selected-opacity: 0.08;
+  --v-activated-opacity: 0.12;
+  --v-pressed-opacity: 0.16;
+  --v-dragged-opacity: 0.08;
+  --v-theme-kbd: 33, 37, 41;
+  --v-theme-on-kbd: 255, 255, 255;
+  --v-theme-code: 52, 52, 52;
+  --v-theme-on-code: 204, 204, 204;
+}
