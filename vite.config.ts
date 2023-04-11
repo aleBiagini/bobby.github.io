@@ -9,13 +9,14 @@ export default defineConfig({
   plugins: [vue()],
   server: {
     https: {
-      key:  fs.readFileSync("./certs/localhost+1-key.pem"),
-      cert:  fs.readFileSync("./certs/localhost+1.pem")
+      key: fs.readFileSync("./certs/localhost+1-key.pem"),
+      cert: fs.readFileSync("./certs/localhost+1.pem")
     }
   },
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url))
     }
-  }
+  },
+  base: '/bobby.github.io/'
 })
